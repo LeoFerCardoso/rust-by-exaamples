@@ -33,7 +33,7 @@ impl Display for Color {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
         // `write!` is like `format!`, but it will write the formatted string
         // into a buffer (the first argument)
-        write!(f, "RGB ({} {} {}) 0x{:X}{:X}{:X}", self.red, self.green, self.blue, self.red, self.green, self.blue)
+        write!(f, "RGB ({} {} {}) {:#04X}{:02X}{:02X}", self.red, self.green, self.blue, self.red, self.green, self.blue)
     }
 }
 
