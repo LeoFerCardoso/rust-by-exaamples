@@ -1,7 +1,7 @@
 # Hello World
  This is the source code of the traditional Hello World program.
 
- println! is a macro that prints text to the console.
+`println!` is a macro that prints text to the console.
 
 A binary can be generated using the Rust compiler: rustc.
 
