@@ -1,7 +1,10 @@
+// An attribute to hide warnings for unused code.
+#![allow(dead_code)]
+
 // This structure cannot be printed either with `fmt::Display` or
 // with `fmt::Debug`.
 
-//struct UnPrintable(i32);
+struct UnPrintable(i32);
 
 // The `derive` attribute automatically creates the implementation
 // required to make this `struct` printable with `fmt::Debug`.
