@@ -60,7 +60,18 @@ fn main() {
     list = list.prepend(2);
     list = list.prepend(3);
 
+    let mut list2 = List::new();
+    
+    // Prepend some elements 
+    list2 = list2.prepend(3)
+                 .prepend(2)
+                 .prepend(1);
+
     // Show the final state of the list
     println!("linked list has length: {}", list.len());
     println!("{}", list.stringify());
+
+    // Show the final state of the list2
+    println!("linked list2 has length: {}", list2.len());
+    println!("{}", list2.stringify());
 }
