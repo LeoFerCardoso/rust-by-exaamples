@@ -47,6 +47,15 @@ fn rect_area(rect: &Rectangle) -> f32 {
     (_x2 - _x1) * (_y1 - _y2)
 }
 
+fn create_square(point: Point, size: f32) -> Rectangle {
+    let _rect = Rectangle {
+        top_left: Point { x: point.x, y: point.y + size },
+        bottom_right: Point { x: point.x + size, y: point.y }
+    };
+
+    _rect
+}
+
 fn main() {
     // Create struct with field init shorthand
     let name = "Peter";
@@ -82,6 +91,14 @@ fn main() {
 
     println!("area of rectangle: {}", rect_area(&_rectangle));
     println!("area of rectangle: {}", _rectangle.area());
+
+    let _square = create_square(point, 5.0);
+    
+    println!("square rectangle: p1({}, {}) p2({}, {})",
+        _square.top_left.x, _square.top_left.y,
+        _square.bottom_right.x, _square.bottom_right.y
+    );
+    println!("area of square rectangle: {}", _square.area());
 
     // Instantiate a unit struct
     let _unit = Unit;
